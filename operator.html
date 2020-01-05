@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OPERATOR</title>
+</head>
+<body>
+
+    <h1>Calculate</h1>
+    <p> Enter the String:</p>
+    <input type="text" id="name">
+    <button onclick="myFunction()"> CLICK </button>
+    <script>
+        function myFunction(){
+            var a=document.getElementById("name").value;
+            //console.log(a);
+            var b=a.split(' ');
+            //console.log(b);
+            var c=b.splice(0,1);
+            console.log(c);
+            var d=b.map(total => parseInt(total));
+            //console.log(d);
+        
+
+        if(c[0]=='+')
+        {
+            var sum=d.reduce((total,currentValue)=>
+            {
+                return total + currentValue;
+            });
+            document.write(sum);
+        }
+        else 
+        
+        if(c[0]=='*')
+        {
+            var mul=d.reduce((total,currentValue)=>
+            {
+                return total * currentValue;
+            });
+            document.write(mul);
+            
+
+
+        }
+        }
+        
+        
+    </script>   
+</body>
+</html>
